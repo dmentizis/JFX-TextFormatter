@@ -1,3 +1,5 @@
+package Sample;
+
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.geometry.Insets;
@@ -34,7 +36,7 @@ public class TextFormatter extends Application {
       public HBoxWithTextField(){
         super(20);
         setPadding(new Insets(5, 5, 5, 5)); 
-        Label lbl = new Label("Εισαγωγή μηνύματος:");
+        Label lbl = new Label("Text input:");
         TextField tf = new TextField();
         tf.setPromptText("Enter your text here");
         tf.setPrefWidth(250);
@@ -48,7 +50,7 @@ public class TextFormatter extends Application {
    protected class HBoxWithButtons extends HBox {      
       public HBoxWithButtons(){
         super(20);
-        setPadding(new Insets(5, 5, 5, 5)); 
+        setPadding(new Insets(5, 5, 5, 5));
         Button btLeft = new Button("Left", new ImageView("image/left.gif"));
         Button btRight = new Button("Right", new ImageView("image/right.gif"));
         getChildren().addAll(btLeft, btRight);
@@ -102,7 +104,7 @@ public class TextFormatter extends Application {
   
   
     @Override // Override the start method in the Application class
-  public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) {
       
     BorderPane borderPane = new BorderPane();    
     
@@ -118,16 +120,12 @@ public class TextFormatter extends Application {
     
     // Create a scene and place it in the stage
     Scene scene = new Scene(borderPane, 450, 200);
-    primaryStage.setTitle("Exercise 5_3"); // Set the stage title
+    primaryStage.setTitle("Text Formatter"); // Set the stage title
     primaryStage.setScene(scene); // Place the scene in the stage
     primaryStage.show(); // Display the stage
 
   }
 
-  /**
-   * The main method is only needed for the IDE with limited
-   * JavaFX support. Not needed for running from the command line.
-   */
   public static void main(String[] args) {
     launch(args);
   }
